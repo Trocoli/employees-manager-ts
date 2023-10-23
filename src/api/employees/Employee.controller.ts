@@ -29,7 +29,7 @@ export async function getById(
     if (employee) {
       res.status(200).json(employee);
     } else {
-      res.status(404).json({ message: "User not found!" + id });
+      res.status(404).json({ message: "User not found at id: " + id });
     }
   } catch (error) {
     next(error);
