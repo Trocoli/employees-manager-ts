@@ -1,8 +1,10 @@
 import { Response, Request, NextFunction } from "express";
 import { Employee } from "./Employee.model";
 import { EmployeeConn } from "./EmployeeConn";
+import { injectDependency } from "../../shared/Container";
 
 const conn = new EmployeeConn();
+injectDependency('EmployeeConn',conn)
 
 export async function getAll(
   req: Request,
