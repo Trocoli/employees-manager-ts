@@ -1,6 +1,6 @@
 import { Router, json } from "express";
 import * as controllers from "./Employee.controller";
-import { validateAsEmployee } from "./Validator";
+import { validateAsEmployee } from "./ZodValidator";
 
 const employeeRouter = Router();
 
